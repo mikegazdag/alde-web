@@ -1,0 +1,51 @@
+friends:
+-
+  name: facebook
+  url: https://www.facebook.com/allan.d.haan?fref=aldewebsite
+  text: Follow me on Facebook
+-
+  name: artbox
+  url: http://loupeimaging.com/
+  text: Printing by ArtBox
+-
+  name: cordova
+  url: http://www.matticksfarm.com/merchants/cordova%20hair/cordovahair.htm
+  text: Haircuts by Cordova Hair
+-
+  name: bcferries
+  url: http://www.bcferries.com
+  text: BC Ferries available in the gift shop aboard most vessels
+
+locations:
+-
+  company: Moka House
+  address: Cook Street Village, Victoria BC
+  url: http://www.mokahouse.com/?page_id=35
+-
+  company: Starbucks
+  address: Cadboro Bay, Victoria BC
+  url: http://www.starbucks.com/store/945/
+-
+  company: Serious Coffee
+  address: Oak Bay, Victoria BC
+  url:
+-
+  company: Side Street Studio
+  address: Oak Bay, Victoria BC
+  url: http://www.sidestreetstudio.com/
+-
+  company: Sundance Java Bar
+  address: Willow Point, Campbell River BC
+  url: http://www.sundancejavabar.ca/
+-
+  company: Impression Art &amp; Framing
+  address: 990 Shoppers Row, Campbell River BC
+  url: http://www.yelp.ca/biz/impressions-custom-framing-ltd-campbell-river
+-
+  company: Campbell River Museum
+  address: 470 Island Hwy, Campbell River BC
+  url: http://www.crmuseum.ca
+-
+  company: Comox Valley Art Gallery
+  address: 580 Duncan Ave, Courtenay BC
+  url: http://www.comoxvalleyartgallery.com
