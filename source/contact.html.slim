@@ -1,0 +1,23 @@
+---
+title: Contact
+innerPage: true
+---
+
+- content_for :scripts, javascript_include_tag("contact.js")
+
+.contact-container
+  form.contact-form [
+    action="http://getsimpleform.com/messages?form_api_token=e56996c2a0a76a0a7ff85aff33ac8672"
+    method="post"
+  ]
+
+    input name="cName" class="contact-input-name" type="text" placeholder="My Name"
+    input name="cEmail" class="contact-input-email" type="email" placeholder="My Email Address"
+    textarea name="message" class="contact-message" placeholder="My Message"
+    button.contact-button type="submit" Send My Message
+
+  .contact-response.success.is-hidden
+    p Great, we've recieved your response! Thanks for your message.
+  .contact-response.error.is-hidden
+    p We're sorry, something went wrong while trying to send the form. Either try again or send an email <a href="mailto:andy@ormazzi.com" target="_blank">andy@ormazzi.com</a>
+

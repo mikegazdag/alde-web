@@ -1,0 +1,32 @@
+---
+title: Gallery
+innerPage: true
+---
+
+/ .gallery-items
+/   - data.paintings.each do |p|
+
+/     figure.gallery-item.effect-lily
+/       = image_tag "paintings/IMG_#{p.id}.jpg", :class => "gallery-image", :alt => "#{p.name}"
+/       figcaption.gallery-caption
+/         = link_to "/painting/#{p.name.parameterize}", :class => "link-to-features" do
+/           h2.name #{p.name}
+/           p.date #{p.date}
+/           p.type #{p.type}
+
+#header
+  .section
+    h1
+      span> W
+      | est Coast
+    h2.color Gallery
+  ul.menu.hori.color
+    / | <?php include ($site_nav); ?
+
+// /! /#header
+
+#main
+  .section
+    .arrange
+
+

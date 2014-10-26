@@ -1,0 +1,31 @@
+
+.masthead
+  +container(100%)
+  background: teal
+  color: #fff
+  position: relative
+
+
+.masthead-heading
+  @extend %secondary-font
+  text-shadow: 2px 2px 0 rgba(black, .80)
+  text-align: left
+  line-height: 1em
+
+  position: absolute
+  bottom: 5%
+  left: 5%
+  padding: 0 0 30px
+
+  span
+    display: block
+    letter-spacing: .1em
+    font-size: 66px
+    line-height: 1.2em
+
+    &:first-child
+      font-size: 84px
+
+    &:last-child
+      font-size: 126px
+      line-height: 0.7em
