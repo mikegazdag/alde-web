@@ -1,0 +1,117 @@
+@import "compass";
+@import "compass/reset";
+@import "compass/css3";
+@import "bourbon/bourbon";
+
+// @font-face {
+//     font-family: 'FatboySlimBoy';
+//     src: url('/fonts/fbsbltc-webfont.eot');
+//     src: url('/fonts/fbsbltc-webfont.eot?#iefix') format('embedded-opentype'),
+//          url('/fonts/fbsbltc-webfont.woff') format('woff'),
+//          url('/fonts/fbsbltc-webfont.ttf') format('truetype'),
+//          url('/fonts/fbsbltc-webfont.svg#FatboySlimBoy') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+
+// }
+
+$bodyBackground: #191919;
+$textColor: #ccc;
+
+$serifFontFamily: 'Averia Serif Libre', cursive;
+
+$baseFontFamily: $serifFontFamily;
+$baseFontSize: 16px;
+$baseLineHeight: 1.4;
+
+$heroUnitBackground: transparent;
+
+$headingsFontFamily: 'FatboySlimBoy', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$headingsFontWeight: normal;
+
+
+$text-shadow: 1px 1px 1px rgba(black,.4);
+$text-shadow-fff: 1px 1px 1px rgba(white, .3);
+
+$trans: 100ms;
+$trans-fast: 50ms;
+$trans-slow: 200ms;
+
+/*
+	GALLERY COLORS
+	MAPPED TO PAINTING COLORS ON PAGES 
+*/
+$color-purple: #7B61AA;
+$color-indigo: $color-purple;
+$color-magenta: #f54897;
+$color-green: #8DC63F;
+$color-orange: #F7941E;
+$color-blue: #00aeef;
+
+$purple:  $color-purple;
+$magenta: $color-magenta;
+$green: $color-green;
+$orange: $color-orange;
+$blue: $color-blue;
+
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/reset";
+
+// Grid system and page structure
+@import "bootstrap/scaffolding";
+@import "bootstrap/grid";
+@import "bootstrap/layouts";
+
+// Base CSS
+@import "bootstrap/type";
+// @import "bootstrap/code";
+@import "bootstrap/forms";
+@import "bootstrap/tables";
+
+// Components: common
+//@import "bootstrap/sprites"; //Note: using font-awesome, look below, so we don't need to include in the project.
+// @import "bootstrap/dropdowns";
+// @import "bootstrap/wells";
+@import "bootstrap/component-animations";
+@import "bootstrap/close";
+
+// Components: Buttons & Alerts
+@import "bootstrap/buttons";
+// @import "bootstrap/button-groups";
+// @import "bootstrap/alerts"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+
+// Components: Nav
+// @import "bootstrap/navs";
+// @import "bootstrap/navbar";
+// @import "bootstrap/breadcrumbs";
+// @import "bootstrap/pagination";
+// @import "bootstrap/pager";
+
+// Components: Popovers
+@import "bootstrap/modals";
+// @import "bootstrap/tooltip";
+@import "bootstrap/popovers";
+
+// Components: Misc
+@import "bootstrap/thumbnails";
+// @import "bootstrap/labels-badges";
+// @import "bootstrap/progress-bars";
+// @import "bootstrap/accordion";
+// @import "bootstrap/carousel";
+// @import "bootstrap/hero-unit";
+
+// Utility classes
+@import "bootstrap/utilities"; // Has to be last to override when necessary
+
+@import "partials/mixins";
+@import "partials/type";
+@import "partials/layout";
+
+
+// SPECIFIC STYLES
+@import "specific/homepage";
+@import "specific/piece";
+@import "specific/about";
+// @import "specific/contact";
+

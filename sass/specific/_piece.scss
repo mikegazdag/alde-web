@@ -1,0 +1,363 @@
+@import "partials/base";
+@import "compass/typography/text/replacement";
+
+//$piece-color: $color-magenta;
+
+
+.westcoast.piece {
+
+	&.blue 		{	@include colorSet($color-blue) }
+	&.purple 	{ 	
+
+		@include colorSet($color-purple);
+
+		.pricing .table {
+			a {
+			    &:active {
+					color: darken($color-purple, 15%);
+				}
+			}
+
+			.b {
+
+				a:active {
+					.price { color: adjust-lightness($color-purple, -15) }
+				}
+				p { color: $color-purple; }
+				.price { 	color: adjust-lightness($color-purple, 25) }
+
+			}
+		}
+
+	}
+	&.green 	{ 	@include colorSet($color-green) 	}
+	&.orange 	{ 	@include colorSet($color-orange) 	}
+	&.magenta 	{ 	@include colorSet($color-magenta) 	}
+
+	&.crest-mt-sunset {
+
+		.painting > img { 
+			@include box-shadow(none);
+		}
+
+		.meta {
+			margin-top: 130px;
+		}
+	}
+
+	&.crest-mt-sunset,
+	&.summers-eve  {
+		@include colorSet($color-orange);
+
+		
+	}
+
+	&.chin-beach-west,
+	&.payzant-creek,
+	&.watcher {
+		@include colorSet($color-magenta)
+	}
+
+	&.hills-of-sooke,
+	&.silent-shadows {
+		@include colorSet($color-green) 
+	}
+
+	&.orca-symmetry {
+		@include colorSet($color-blue) 
+	}
+
+	&.chesterman-beach,
+	&.plum-crazy,
+	&.ravens-roost,
+	&.starry-night {
+		@include colorSet($color-purple)
+	}
+
+}
+
+.westcoast.piece {
+
+	.top {
+		background: transparent url('/images/details-header-bg.png') repeat-x top;
+		min-height: 675px;
+	}
+
+	.painting > img {
+		display: block;
+		margin: 4rem auto 2.5rem;
+		@include box-shadow(0px 0px 10px 5px #252726);
+	}
+
+	.mid {
+		background: transparent url('/images/details-mid-bg.png') repeat-x top;
+		min-height: 570px;
+		margin-top: 2rem;
+	}
+
+	h1 {
+		text-align: left;
+		margin-top: 0;
+	}
+
+	.post p {
+		margin: 0;
+		@extend .body-text;
+		color: #ccc;
+		line-height: 24px;
+		@include columns(20em 2);
+	}
+
+	.meta {
+		margin-top: 230px;
+
+		> p {
+			font: 1rem/1.5em;
+			margin: 0;
+			line-height: 1.4em;
+
+			i {
+				font-variant: normal;
+				color: #ccc;
+			}
+
+		}
+
+	}
+
+	.sub-gallery {
+			background: black;
+
+			a {
+				@include inline-block;
+				height: 65px;
+				width: 65px;
+
+				img {
+					width: 100%;
+				    height: 100%;
+				}
+			}
+		}
+
+	.border {
+		border-bottom: 1px solid adjust-lightness(#ccc, 5);
+		margin-bottom: 2rem;
+	}
+
+	.sales {
+		
+		p {
+			color: #ccc;
+		}
+
+		.sales-info {
+			p {
+				padding-top: 22px;
+				margin-bottom: 0;
+				font-size: 14px;
+
+				&.lead {	
+					font-size: 34px;
+					margin-bottom: 0;
+					padding-top: 12px;
+					line-height: 1em;
+
+					& + p {
+						padding-top: 0;
+					}
+				}
+
+			}
+		}
+	}
+
+
+	.meta-print {
+
+		.content {
+			background: #222;
+		}
+	}
+
+	.pricing {
+		z-index: 0;
+		margin-left: 0;
+
+		.table {
+
+
+			td {
+				border: 0;
+				padding: 10px 0;
+
+				@include transition-property(background);
+				@include transition-duration(75ms);
+				@include transition-timing-function(ease-in-out);
+			}
+
+			tr:hover {
+				
+				> td {
+					background: #222;
+					background: rgba(34,34,34,.75);
+				}
+
+				.pay {
+					left: 125px;
+					top: 5px;
+					opacity: 1;
+					background: #0076A3;
+					cursor: pointer;
+
+					@include transition-property(background);
+					@include transition-duration(45ms);
+					@include transition-timing-function(ease-in-out);
+
+					&:hover {
+						background: adjust-lightness( #0076A3, 10);
+
+						&:before {
+							border-color: transparent adjust-lightness( #0076A3, 10) transparent transparent;
+						}
+					}
+				}
+			}
+
+			tr:active {
+				> td {
+					background: #eee;
+				}
+			}
+
+			h2 {
+				font-size: 30px;
+				font-family: 'FatboySlimBoy';
+				text-align: right;
+				margin: 0;
+				text-transform: capitalize;
+				padding-top: 7px;
+				line-height: 1em;
+			}
+
+			p {
+				font-size: 14px;
+				text-align: right;
+				margin: 0;
+			}
+
+
+
+			.i {
+				padding: 0 12px 0 0;
+				cursor: pointer;
+
+				&.highlight {
+					background: #222;
+				}
+			}
+
+			.b {
+				position: relative;
+
+				a {
+					display: block;
+					padding: 8px 20px 8px 0;
+
+					&:hover {
+						text-decoration: none;
+					}
+
+				}
+
+				p,b,span {
+					@include transition-property(color);
+					@include transition-duration(70ms);
+					@include transition-timing-function(ease-in-out);
+				}
+
+				p {
+					font-size: 30px;
+					line-height: 1em;
+					padding: 0;
+					text-align: right;
+				}
+
+				b {
+					font-weight: normal;
+					font-size: 18px;
+					position: relative;
+					top: -0.5rem;
+				}
+
+				span {
+					display: block;
+					font-size: 13px;
+					line-height: 1em;
+					display: block;
+					text-align: right;
+
+					&.price {
+						font-size: 30px;
+						display: inline-block;
+						line-height: 1em;
+						padding: 0;
+						text-align: right;
+					}
+				}
+
+				.pay {
+					position: absolute;
+					top: 5px;
+					color: adjust-lightness(#fff, 5);
+					font-size: 16px;
+					width: 170px;
+					height: 61px;
+					@include opacity(0);
+					padding: 8px 15px;
+					@include transition-property(all);
+					@include transition-duration(35ms);
+					@include transition-timing-function(ease-in-out);
+
+					&:before {
+							content: " ";
+							display: block;
+							width: 0;
+							height: 0;
+							border-style: solid;
+							border-width: 38.5px 23px 38.5px 0;
+							border-color: transparent #0076a3 transparent transparent;
+							position: absolute;
+							left: -23px;
+							top: 0;
+						}
+
+					span {
+						display: block;
+						font-size: 30px;
+						color: #fff;
+						text-align: left;
+					}
+
+					> a {
+						background: transparent;
+						color: #fff;
+						padding-top: 6px;
+
+						&:hover:before {
+							border-right-color: #222;
+						}
+					}
+
+
+
+				}
+
+			}
+
+		}
+
+
+}}
+
+

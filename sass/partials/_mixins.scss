@@ -1,0 +1,66 @@
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} { @content; }
+    @-moz-keyframes #{$name} { @content; }
+    @-ms-keyframes #{$name} { @content; }
+    @keyframes #{$name} { @content; }
+}
+
+
+@mixin triangle ($page-main-color){
+
+}
+/*
+    Gallery Colours, can be mapped to painting colors */
+// delete this late:
+$color-purple: #7B61AA;
+$color-indigo: $color-purple;
+$color-magenta: #f54897;
+$color-green: #8DC63F;
+$color-orange: #F7941E;
+$color-blue: #00aeef;
+
+@mixin letterpress($opacity){
+    text-shadow:white($opacity) 0 1px 0;
+}
+
+@mixin colorSet($page-color) {
+	a {
+        &:active {
+          color: darken($page-color, 15%) }
+
+		&:hover {
+          color: darken($page-color, 15%) }
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	p,
+	.menu li a {
+		color: $page-color;
+	}
+	#footer { 
+		.links .events a {
+			color: $page-color;
+
+			&:hover {
+				color: adjust-lightness($page-color, 25);
+			}
+		}
+	}
+
+  /*Default colours
+  body {
+    @include colorSet();
+  }
+  Scoped colours
+  .my-theme-3 {
+    @include colorSet($color3);
+  }
+  .my-theme-2 {
+    @include colorSet($color2);
+  }*/
+
+}
+

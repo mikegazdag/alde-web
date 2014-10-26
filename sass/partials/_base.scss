@@ -1,0 +1,157 @@
+//shared elements
+.button {
+
+	&.large {
+	  padding: 14px 34px 12px 34px;
+	  font-size: 20px;
+	  line-height: normal;
+	  font-weight: bold;
+	}
+
+	&.medium {
+	  padding: 10px 15px 7px 15px;
+	  font-size: 16px;
+	  line-height: normal;
+	  font-weight: bold;
+	}
+
+	&.fill {
+	  display: block;
+	  width: 100%;
+	  padding-left: 0;
+	  padding-right: 0;
+	  clear: both;
+	}
+}
+
+.menu {
+	font-family: 'FatboySlimBoy', Arial, Geneva, sans-serif;
+	font-size: 1.5rem;
+	line-height: 1.3em;
+	text-shadow: 3px 3px 0px #252726;
+	text-align: center;
+	margin: 45px 0;
+
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+	opacity: 0.4;
+	@include transition(color .15s ease-in-out, opacity .5s ease-in-out);
+
+	&.bold {
+		filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+		opacity: 0.8;
+	}
+
+	li {
+		padding: 0;
+		margin: 0;
+
+		a {
+			@include transition(padding .35s ease-in-out, color .65s ease-out);
+			padding: 10px;
+			@include border-radius(40px);
+			margin: 0;
+
+			&:hover {
+				text-decoration: none
+			}
+
+		}
+	}
+
+	&:hover {
+		filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=1);
+		opacity: 1;		
+	}
+
+	&.hori {
+
+		li {
+			@include inline-block;
+		}
+
+		a {
+			
+			&:hover {
+				padding: 10px 25px;
+				color: white;
+			}
+		}
+	}
+
+	&.vert {
+		padding: 0 8px;
+
+		text-align: left;
+		list-style: none;
+		padding: 0;
+		margin: 0 auto 35px;
+		width: 80%;
+
+		li {
+			margin: 5px 0;
+			width: 100%;
+			display: block;
+			padding: 0;
+
+			a {
+
+				display: inline-block;
+				width: auto;
+				padding: 2px 0;
+
+				&:hover {
+					color: white;
+					padding: 8px 0;
+
+				}
+			}
+		}
+	}
+
+	&.enhance  {
+		$enhance-nav-height: 83px;
+		$enhance-nav-width: 158px;
+
+		li {
+			width: $enhance-nav-width;
+			height: $enhance-nav-height;
+			background: url('/images/nav/li-mid.png') no-repeat center;
+			margin: 0;
+
+			&:first-of-type {
+				background: url('/images/nav/li-first.png') no-repeat center;
+			}
+
+			&:last-of-type {
+				background: url('/images/nav/li-last.png') no-repeat center;
+			}
+
+			a  {
+
+				@include transition-property(all);
+				@include transition-duration(125ms);
+				@include transition-timing-function(ease-in);
+				@include inline-block;
+				line-height: $enhance-nav-height;
+				width: $enhance-nav-width;
+				background: #76787a;
+
+				color: #000;
+				text-shadow: none;
+				padding: 0;
+				margin: 0;
+
+				width: 134px;
+				height: 51px;
+
+				&:hover {
+					padding: 0;
+					color: #fff;
+					text-shadow: #252726 2px 1px 0px;
+					//background: $color-green;
+				}
+
+			}
+		}
+	}
+}

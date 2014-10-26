@@ -1,0 +1,138 @@
+.button {
+
+	&.large {
+	  padding: 14px 34px 12px 34px;
+	  font-size: 20px;
+	  line-height: normal;
+	  font-weight: bold;
+	}
+
+	&.medium {
+	  padding: 10px 15px 7px 15px;
+	  font-size: 16px;
+	  line-height: normal;
+	  font-weight: bold;
+	}
+
+	&.fill {
+	  display: block;
+	  width: 100%;
+	  padding-left: 0;
+	  padding-right: 0;
+	  clear: both;
+	}
+}
+
+
+
+.body-text {
+	color: #ccc;
+	font-family: $baseFontFamily;
+	font-size: 1.2em;
+	line-height: 1.6em;
+	margin-bottom: 20px;
+}
+
+
+
+.font-fatboy {
+    font-family: 'FatboySlimBoy', Arial, Geneva, sans-serif;
+}
+
+.font-averia { 
+    font-family: $baseFontFamily;
+}
+
+.font-padding {
+    margin: 30px 0;
+}
+
+p.story, 
+#story > p {
+    letter-spacing: 2px;
+}
+
+
+// .events {
+// 	margin-top: 50px;
+// 	width: 550px;
+// 	display: block;
+
+// 	ul {
+// 		padding: 0 15px 15px;
+
+// 		li {
+
+// 			h3 {
+// 				border-top: 1px solid white;
+// 				font: 800 25px/1.3em 'FatboySlimBoy', Arial, Geneva, sans-serif;
+// 				text-align: left;
+// 				text-shadow: 3px 3px 0px #252726;
+// 				padding: 0 0 0 20px;
+// 			}
+
+// 			> p {
+// 				text-align: left;
+// 				margin-bottom: 15px;
+// 				font-family: Arial;
+// 				text-transform: uppercase;
+// 				position: relative;
+// 				padding: 0 0 0 20px;
+// 			}
+// 		}
+// 	}
+
+// 	.post-date {
+// 		background: #fff;
+// 		border-top: 1px solid white;
+// 		color: #868686;
+// 		line-height: 10px;
+// 		margin-top: 0px;
+// 		margin-left: 10px;
+// 		padding: 0;
+// 		font-family: Arial, sans-serif;
+// 		width: 49px;
+// 		position: absolute;
+// 		top: 0;
+// 		@include border-radius(4px);
+// 		@include box-shadow(0 0 5px rgba(black, 0.5));
+
+// 	  		&.start {
+// 	  			left: -55px;
+// 	  		}
+
+// 	  		&.end {
+// 	  			right: 0;
+// 	  		}
+
+// 		   .day	{
+// 			   font-size: 30px;
+// 			   color: #027AC6;
+// 			   margin: 0;
+// 			   background: #fff;
+// 			   padding: 10px 0;
+// 			   @include border-corner-radius(top, left, 0);
+// 			   @include border-corner-radius(top, right, 0);
+// 			   @include border-corner-radius(bottom, left, 2px);
+// 			   @include border-corner-radius(bottom, right, 2px);
+// 			   text-align: center;
+// 		   }
+
+// 		   .month	{
+// 			   color: #fff;
+// 			   font-size: 14px;
+// 			   line-height: 10px;
+// 			   background: #027AC6;
+// 			   margin: 0;
+// 			   padding: 4px 0 4px 0;
+// 			   text-transform: uppercase;
+// 			   text-align: center;
+// 		   }
+// 	}
+// }
+
+
+
+
+
+

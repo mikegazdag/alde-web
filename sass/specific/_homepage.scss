@@ -1,0 +1,587 @@
+@import "partials/base";
+
+$homepage-color: $color-indigo;
+
+@include keyframes(sway) {
+	from {
+		@include rotate(3deg);
+   		@include transform-origin(50% 0%);
+	}
+
+	to {
+    	@include rotate(-3deg); 
+	}
+}
+
+@include keyframes(float) {
+	from {
+		-webkit-transform: 	translate3d(1.35%, 0, 0);
+		-moz-transform: 	translate3d(1.35%, 0, 0);
+		-o-transform:		translate3d(1.35%, 0, 0);
+		-ms-transform: 		translate3d(1.35%, 0, 0);
+		transform: 			translate3d(1.35%, 0, 0);
+	}
+
+	to { 
+	    -webkit-transform: 	translate3d(-1.15%, 0, 0);
+		-moz-transform: 	translate3d(-1.15%, 0, 0);
+		-o-transform: 		translate3d(-1.15%, 0, 0);
+		-ms-transform: 		translate3d(-1.15%, 0, 0);
+		transform: 			translate3d(-1.15%, 0, 0); 
+	}
+}
+
+@include keyframes(pulse-smooth) {
+    0%		{ background: $homepage-color }
+    50%		{ background: adjust-lightness($homepage-color, 15)}
+    100%	{ background: $homepage-color }
+}
+
+@include keyframes(pointer-1) {
+    0%		{ border-top-color: $homepage-color }
+    50%		{ border-top-color: adjust-lightness($homepage-color, 25)}
+    100%	{ border-top-color: $homepage-color }
+}
+
+@include keyframes(pointer-2) {
+    0%		{ border-top-color: $homepage-color }
+	50%		{ border-top-color: adjust-lightness($homepage-color, -25)}
+    100%	{ border-top-color: $homepage-color }
+}
+
+
+@import "sprites/west-coast-pieces-small/*.png";
+@include all-west-coast-pieces-small-sprites();
+
+.front {
+	// $homepage-color: $color-indigo;
+	@include colorSet($color-indigo);
+	// position: relative;
+
+
+}
+
+.pointer {
+	width: 100px;
+	height: 100px;
+	display: block;
+	position: relative;
+	margin: 2rem auto 0;
+
+	.triangle {
+		width: 0px;
+		height: 0px;
+		border-style: solid;
+		border-width: 47px 44px 0 44px;
+		border-color: $homepage-color transparent transparent transparent;
+
+		position: absolute;
+		z-index: 10;
+
+		@include animation(pointer-1 2.75s ease-in-out infinite);
+	}
+
+	.triangle2 {
+		width: 0px;
+		height: 0px;
+		border-style: solid;
+		border-width: 88px 44px 0 44px;
+		border-color: lighten($homepage-color, 80) transparent transparent transparent;
+		filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+		opacity: 0.1;
+
+		z-index: -5;
+
+		@include animation(pointer-1 2.25s ease infinite);
+	}
+}
+
+.front {
+
+	footer .menu {
+		margin: 2.4rem 0 1.2rem;
+		// padding-left: 15rem;
+		@extend .bold;
+	}
+
+	.hero-unit {
+		margin: 0 auto;
+
+		h1 {
+			position: relative;
+			margin: 0 auto;
+			top: 320px;
+			left: -90px;
+			color: #fff;
+			text-shadow: 2px 2px 0px #000;
+
+			span {
+				font-size: 8rem;
+				top: 27px;
+				left: 10px;
+			}
+		}
+
+		h2 {
+			color: #808285;
+			font-size: 1rem;
+			line-height: 2em;
+			letter-spacing: 4px;
+			text-align: right;
+			text-shadow: 2px 2px 0px #000;
+			margin: .5rem 4rem 3rem 0;
+		}
+
+		#logo {
+			display: block;
+			padding-top: 50px;
+		}
+
+
+	.menu {
+
+		a {
+			color: $homepage-color;
+		}
+	}
+
+	} //hero-unit
+
+	.scene-1 {
+		position: relative;
+		background: url('/images/front-bottom-main.png') no-repeat center bottom;
+		height: 1140px;
+
+		> .prop {
+			position: relative;
+			margin: 0 auto;
+		}
+		.moon {
+			background: url('/images/front-moon.png') no-repeat center center;
+			height: 267px;
+			width: 265px;
+			left: 170px;
+			@include animation(sway 6s ease-in-out infinite alternate);   
+		}
+
+		.owl {
+			background: url('/images/prop-owl.png') no-repeat center center;
+			height: 411px;
+			width: 408px;
+			left: -80px;
+			z-index: -5;
+			zoom: 1;
+			@include animation(float 1.5s ease-in-out infinite alternate); 
+		}
+
+		.oval {
+			width: 518px;
+			height: 210px;
+			background-color: #6b639e;
+			@include border-radius (#{ 259px / 105px});
+			bottom: -120px;
+			z-index: -5;
+		}
+
+		.rectangle {
+			width: 945px;
+			height: 60px;
+			z-index: -10;
+			background-color: #6b639e;
+			bottom: -339px;
+		}
+
+		.prop {
+			&.rectangle,
+			&.oval {
+				@include animation(pulse-smooth 2.75s ease-in-out infinite alternate);
+				position: relative;
+				margin: 0 auto;
+
+			}
+		}	
+
+	} //.scene-1
+
+	.gallery {
+		position: relative;
+		padding: 254px 0 686px;
+		overflow: hidden;
+
+		.container {
+			background: #1e1e1e;
+			height: 1505px;
+			display: block;
+			position: relative;
+
+			&:before {
+				content: "";
+				background-color: #1a3a43;
+				background: transparent url('/images/front-gallery-top.png') no-repeat;
+				width: 1437px;
+				height: 254px;
+
+				position: absolute;
+				top: -254px;
+				left: -246px;
+			}
+
+			&:after {
+				content: "";
+				background-color: navy;
+				background: url('/images/front-gallery-bottom.png') no-repeat;
+				width: 1096px;
+				height: 686px;
+
+				position: absolute;
+				left: -75px;
+				bottom: -681px;
+			}
+
+			.piece { 
+				position: absolute; 
+				overflow: hidden;
+				cursor: pointer;
+				display: table;
+				@include transition-property(box-shadow);
+				@include transition-duration(125ms);
+				@include transition-timing-function(ease-in-out);
+
+				&.west-coast-pieces-crest-mt-sunset {
+					box-shadow: none;
+					left: 20px;
+				}
+
+				.meta {
+					@include opacity(0);
+					@include transition-property(opacity);
+					@include transition-duration(450ms);
+					@include transition-timing-function(ease-in-out);
+					display: table-cell;
+					text-align: center;
+					vertical-align: middle;
+
+					h3,
+					h4 {
+						text-align: center;
+						display: block;
+						color: #fff;
+						font-family: 'Averia', serif-sans;
+						font-size: 24px;
+						font-weight: normal;
+						letter-spacing: 1px;
+						line-height: 1.2em;
+						padding: 15px 0;
+					}
+
+					a {
+						text-decoration: none;
+						display: block;
+						@include transition-property(background,color);
+						@include transition-duration(175ms);
+						@include transition-timing-function(ease-out);
+					}
+				}
+
+				&.west-coast-pieces-crest-mt-sunset:hover {
+					@include box-shadow(none);
+				}
+
+				// &.the-rounds:hover {
+				// 	@include border-radius(224px);
+				// }
+
+				&:hover {
+					@include box-shadow(inset 0px 0px 50px 15px rgba(black, 1));
+					
+					.meta {
+						opacity: 1;
+						filter: alpha(opacity=1);
+					}
+				}
+
+				&:active {
+					@include box-shadow(inset 0px 0px 50px 15px rgba(32, 32, 32, .7));
+				}
+			}
+		}
+
+		.side {
+			background-color: transparent;
+			background-position: left top;
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 0;
+
+			&.left {
+				// background-color: pink;
+				background-image: url('/images/front-gallery-left.png');
+				height: 1500px;
+				width: 267px;
+				left: -267px;
+				top: 0;
+			}
+
+			&.right {
+				// background-color: lime;
+				background-image: url('/images/front-gallery-right.png');
+				height: 1500px;
+				width: 272px;
+
+				right: -272px;
+				top: 0;
+			}
+		}
+
+		$rounds-size: 224px;
+		.west-coast-pieces-crest-mt-sunset {
+			@include west-coast-pieces-small-sprite(crest-mt-sunset);
+			height: 197px;
+			width: 519px;
+		}
+		.west-coast-pieces-silent-shadows {
+			@include west-coast-pieces-small-sprite(silent-shadows);
+			height: 339px;
+			width: 226px;
+
+			right: 10px;
+			top: 35px;
+		}
+		.west-coast-pieces-summers-eve {
+			@include west-coast-pieces-small-sprite(summers-eve);
+			width: 337px;
+			height: 225px;
+
+			top: 230px;
+			left: 40px;
+		}
+		.west-coast-pieces-ravens-roost {
+			@include west-coast-pieces-small-sprite(ravens-roost);
+			width: 225px;
+			height: 567px;
+
+			right: 260px;
+			top: 200px;
+		}
+		.west-coast-pieces-chin-beach-west {
+			@include west-coast-pieces-small-sprite(chin-beach-west);
+			width: 227px;
+			height: 336px;
+
+			right: 15px;
+			top: 445px;
+		}
+
+
+		.west-coast-pieces-chesterman-beach {
+			@include west-coast-pieces-small-sprite(chesterman-beach);		
+			height: $rounds-size;
+			width:  $rounds-size;
+
+			right: 80px;
+			top: 850px;
+		}
+
+		.west-coast-pieces-hills-of-sooke {
+			@include west-coast-pieces-small-sprite(hills-of-sooke);
+			height: $rounds-size;
+			width:  $rounds-size;
+
+			top: 860px;
+			left: 350px;
+		}
+		.west-coast-pieces-orca-symmetry {
+			@include west-coast-pieces-small-sprite(orca-symmetry);
+			height: $rounds-size;
+			width:  $rounds-size;
+
+			left: 370px;
+			top: 1145px;
+		}
+		.west-coast-pieces-payzant-creek {
+			@include west-coast-pieces-small-sprite(payzant-creek);
+			height: $rounds-size;
+			width:  $rounds-size;
+
+			width: 224px;
+			top: 880px;
+			left: 40px;
+		}
+		.west-coast-pieces-plum-crazy {
+			@include west-coast-pieces-small-sprite(plum-crazy);
+			width: 412px;
+			height: 307px;
+
+			left: 0;
+			top: 520px;
+		}			
+
+		.west-coast-pieces-starry-night {
+			@include west-coast-pieces-small-sprite(starry-night);
+			height: $rounds-size;
+			width:  $rounds-size;
+
+			right: 50px;
+			top: 1150px;
+		}
+
+		.west-coast-pieces-watcher {
+			@include west-coast-pieces-small-sprite(watcher);
+			height: $rounds-size;
+			width:  $rounds-size;
+
+			top: 1155px;
+			left: 80px;
+		}
+	}
+
+}
+
+$s2-height: 1006px;
+$s2-width: 440px;
+
+.front .scene-2 {
+	position: relative;
+	width: 100%;
+	height: $s2-height + 40px;
+	margin: 50px 0 80px;
+
+	> .prop {
+		position: absolute;
+		top: 0;
+	}
+	
+	.coromorant {
+		background: url('/images/front-cormorant.png') no-repeat center bottom;	
+		left: 50%;
+		margin-left: -220px;
+
+		height: $s2-height;
+		width: $s2-width;	
+	}
+
+	.color {
+		@include animation(pulse-smooth 2.75s ease-in-out infinite alternate);
+		z-index: -15;
+		height: $s2-height;
+		width: $s2-width;	
+		left: 50%;
+		margin-left: -220px;
+
+	}
+}
+
+.front .following-eye {
+	position: relative;
+	height: 210px;  
+	padding-top: 70px;
+	margin-bottom: 3rem;
+
+	> .prop {
+		position: absolute;
+		top: 0;
+	}
+
+	.clam {
+		background: url("/images/front-clam.png") no-repeat;
+		width: 385px;
+		height: 286px;
+		z-index: -20;
+		position: absolute;
+		left: 50%;
+		margin-left: -182px;
+		top: -175%;
+	}
+
+	.gloss {
+		width: 20px;
+		height: 20px;
+		background: #fff;
+		@include border-radius(20px);
+		opacity: .86;
+		position: absolute;
+		left: 50%;
+		margin-left: 15px;
+		z-index: 20;
+		top: 11px;
+	}
+
+	.wrap {
+		width: 40px;
+		position: absolute;
+		margin-left: -20px;
+		left: 50%;
+		z-index: 10;
+
+		.base {
+			width: 109px;
+			height: 129px;
+			@include border-radius (#{55px / 65px });
+			background: #0c0c0c;
+			z-index: -5;
+			position: absolute;
+			top: -40px;
+			left: -21px;
+		}
+
+		.eyeball {
+			width: 65px;
+			height: 77px;
+			background-color: $homepage-color;
+			@include border-radius (#{32px / 38px });
+			z-index: 0;
+			@include animation(pulse-smooth 2.75s ease-in-out infinite alternate);
+		}
+
+		.iris {
+			width: 36px;
+			height: 42px;
+			background: #1E1E1E;
+			@include border-radius (#{18px / 21px });
+			z-index: 5;
+						
+		}
+	}
+}
+
+.the-end {
+	h3 {
+		font-size: 90px;
+		letter-spacing: 14px;
+		color: $homepage-color;
+		text-shadow: 3px 3px 0px #252726; 
+
+
+		span {
+			@include inline-block;
+
+			&.char1 {
+				@include rotate(-10deg); }
+			
+			&.char2 {
+				@include rotate(22deg);	}
+			
+			&.char3 {
+				@include rotate(16deg); }
+
+			&.char4 {
+				width: 40px; }
+			&.char5 {
+				@include rotate(-20deg); }
+			
+			&.char6 { 
+				@include rotate(-14deg); }
+			
+			&.char7 {
+				@include rotate(11deg); }
+		}
+	}
+
+	p.body-text {
+		color: #ccc;
+		letter-spacing: 0;
+		font-size: 1rem;
+		text-align: center;
+		margin: 1.4rem 0 1.2rem -80px;
+	}
+}
