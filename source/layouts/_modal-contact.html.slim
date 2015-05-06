@@ -1,0 +1,37 @@
+.contact-modal.modal
+  .container
+    a.modal-close  href: '#'   Close
+
+  .container.form-container
+    = partial 'partials/form_simple'
+    = partial 'partials/form_advanced'
+
+  .container
+    #form-state-sending.form-state
+      .form-state-container
+        h1 Sending&hellip;
+
+  .container
+    #form-state-success.form-state
+      .form-state-container
+        h1 Thanks
+        p
+          | We'll do our best to respond within a few business days.
+
+  .container
+    #form-state-fail-server.form-state
+      .form-state-container
+        h1 Send Failed
+        p
+          | We're currently experiencing server issues.
+
+        = link_to 'Try Again', '#', class: 'button'
+
+  .container
+    #form-state-fail-email.form-state
+      .form-state-container
+        h1 Send Failed
+        p
+          | The e-mail address you entered is invalid.
+
+        = link_to 'Go Back', '#', class: 'button'

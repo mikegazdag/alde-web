@@ -1,0 +1,146 @@
+---
+title:
+layout: paintings
+innerPage: true
+NavHomeButton: true
+---
+- p = locals[:name]
+
+/ .painting-container
+
+/   .painting-meta-container
+/     h1.painting-name #{p.name}
+
+/     .painting-meta
+/       p
+/         span Created
+/         strong.painting-date #{p.date}
+
+/       p
+/         span Size
+/         strong.painting-size #{p.howBig}
+
+/       p
+/         span Technique
+/         strong.painting-type #{p.type}
+
+/       p
+/         span Price
+/         strong.painting-price $#{p.cost}
+
+/   .painting-image-container
+/     img.painting-image src=image_path("images/paintings/#{p.file}") alt="#{p.name}"
+
+section.top
+  .container
+    .row
+      .span12.painting
+       / | <img src="
+       / | <?php echo '/'.$imgSRC . imgSrcBuilder($d["title"]) .'.png' ?
+       / | " alt="
+       / | <?php echo $d['title'] ?
+       / | "
+    .row
+      .span6.post
+        p
+          // | <?php echo $d["description"]; ?
+      .span6.meta
+        h1
+          // | <?php echo $d['title'] ?
+        p
+          i Date Created:
+          | August, 2010
+        p
+          i Type:
+          | Acrylic on Canvas
+        p
+          i Size:
+          | 24" x 24" x 1.5"
+        p
+          // i Collection:
+          // | <?php // $result = explode("-", $d['collection']);
+          // | echo $collection; ?
+          p
+section.mid
+  .container
+    .row.meta-sales
+      .span7.pricing
+        table.table.table-condensed
+          tbody
+            tr
+              td.i
+                h2 Poster Paper
+                p High quality macosa print
+              td.b
+                a href=("<?php echo $poster->link ?>")
+                  p
+                    b $
+                    /| <?php echo $poster?
+                    | price ?
+                    span
+                      /| <?php echo $poster?
+                      | size ?
+                    p
+                      .pay
+                        | Continue to
+                        img alt="Paypal" heihgt="20" src="/images/logo-paypal.png" width="76" /
+      /! another
+      tr
+        td.i
+          h2 Block Mount
+          p Printed on wood&mdash;made for easy hanging
+        td.b
+          a href="http://google.com"
+            p
+              b> $
+              | 44
+              span 1:3 10" x 10"
+              p
+                .pay
+                  | Continue to
+                  span PayPal
+                  /! <img src="/images/logo-paypal.png" alt="Paypal" width="76" heihgt="20"
+    /! another
+    tr
+      td.i
+        h2 Fine Art Paper
+        p Museum quality digital print of the original painting
+      td.b.c
+        a href="#"
+          p
+            b> $
+            | 87
+            span 1:2 15" x 15"
+            p
+              .pay
+                | Continue to
+                span PayPal
+                /! <img src="/images/logo-paypal.png" alt="Paypal" width="76" heihgt="20"
+  tr
+    td.i
+      h2 Giclee
+      p Printed Canvas stretched on 1.5' Pine Frame
+    td.b.c
+      a href="#"
+        p
+          b> $
+          | 219
+          span 1:2 15" x 15"
+          p
+            .pay
+              | Continue to
+              span PayPal
+              /! <img src="/images/logo-paypal.png" alt="Paypal" width="76" heihgt="20"
+  .span5.meta-print
+    .content style="display:none"
+      h4 Block Mount Print
+      p Block mount prints are high quaility laser prints on MDF and ready for easy hanging
+      ul.thumbnails
+        li.span1
+          img alt="" src="http://placehold.it/75x100/" /
+        li.span1
+          img alt="" src="http://placehold.it/75x100/" /
+        li.span1
+          img alt="" src="http://placehold.it/75x100/" /
+        li.span1
+          img alt="" src="http://placehold.it/75x100/" /

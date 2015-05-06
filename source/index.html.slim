@@ -1,0 +1,135 @@
+---
+title: Allan De Haan Art
+---
+section.masthead
+  .container.masthead-background
+
+    h1.masthead-heading
+      span allaN
+      span Dehaan
+      span art
+
+    .masthead-prop
+
+section.album
+
+  .album-container
+    h2.album-heading Winter Migration
+
+    = image_tag('/images/pieces/winter-migration.png', class: "album-image")
+
+    p.album-image-description
+      | Many things in our lives changed in our lives over the years,
+      | but time seems to have stood still, as if immortalized, with the ocean roar
+      | and the pound surf rolling in as the sun turns molten in the distant sky.
+
+    / = link_to "Learn More", "http://wheverever.com", class: "album-button"
+
+section.album.totems
+
+  .album-container
+    p.album-heading Totems
+
+    .album-images-container
+      figure.album-image-container
+        = image_tag('/images/pieces/mystic-dream.png', class: "album-image")
+        figcaption
+          h2.photo-heading Mystic Dream
+
+      figure.album-image-container
+        = image_tag('/images/pieces/reflections-of-the-past.png', class: "album-image")
+        figcaption
+          h2.photo-heading Reflections of the Past
+
+      figure.album-image-container
+        = image_tag('/images/pieces/distant-echoes.png', class: "album-image")
+        figcaption
+          h2.photo-heading Distance Echoes
+
+
+    /  img.album-image [
+      style="background-image: url('/images/pieces/winter-migration.png')"
+      data-retina-bg="url('/images/pieces/winter-migration@2x.png')" ]
+
+    p.album-image-description
+      | Many things in our lives changed in our lives over the years,
+      | but time seems to have stood still, as if immortalized, with the ocean roar
+      | and the pound surf rolling in as the sun turns molten in the distant sky.
+
+    / = link_to "Learn More", "http://wheverever.com", class: "album-button"
+
+section.album
+  .album-container
+
+    h2.album-heading Plum Crazy
+    = image_tag('/images/pieces/plum-crazy.png', class: "album-image")
+
+    / img.album-image [
+      style="background-image: url('/images/pieces/winter-migration.png')"
+      data-retina-bg="url('/images/pieces/winter-migration@2x.png')" ]
+
+    p.album-image-description
+      | Many things in our lives changed in our lives over the years,
+      | but time seems to have stood still, as if immortalized, with the ocean roar
+      | and the pound surf rolling in as the sun turns molten in the distant sky.
+
+    / = link_to "Learn More", "http://wheverever.com", class: "album-button"
+
+section.album.rounds
+  .rounds-big
+  .container
+
+    .album-images-container
+
+      h2.album-heading
+        span The
+        | Rounds
+
+      figure.album-image-container
+        = image_tag('/images/pieces/chesterman-beach.png', class: "album-image")
+        figcarption
+          h2.photo-heading Chestman Beach
+
+      figure.album-image-container
+        = image_tag('/images/pieces/the-watcher.png', class: "album-image")
+        figcaption
+          h2.photo-heading The Watcher
+
+      figure.album-image-container
+        = image_tag('/images/pieces/the-hills-of-sooke.png', class: "album-image")
+        figcaption
+          h2.photo-heading Hills of Sooke
+
+      figure.album-image-container
+        = image_tag('/images/pieces/orca-symmetry.png', class: "album-image")
+        figcaption
+          h2.photo-heading Orca Symmetry
+
+      figure.album-image-container
+        = image_tag('/images/pieces/payzant-creek.png', class: "album-image")
+        figcaption
+          h2.photo-heading Payzant Creek
+
+      figure.album-image-container
+        = image_tag( '/images/pieces/starry-starry-night.png', class: "album-image")
+        figcaption
+          h2.photo-heading Starry Starry Night
+
+
+/-------------------------------------------------------------------------------
+/ Featured Post
+/-------------------------------------------------------------------------------
+/ section.featured-post
+
+/   - article = blog.articles.find { |article| article.data[:featured] } || blog.articles.first
+/   - author = data.authors.find { |author| author.short == article.data.author }
+
+/   article.featured [
+/     class="#{author.short}"
+/     style="background-image: url('/images/authors/#{author.short}-featured.jpg')"
+/     data-retina-bg="url('/images/authors/#{author.short}-featured@2x.jpg')"]
+/     = link_to "#{article.url}", class: "featured-container"
+/       h1.featured-heading #{article.title}
+/       p.featured-meta
+/         em> with
+/         span #{author.full}

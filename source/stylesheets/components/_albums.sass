@@ -1,0 +1,150 @@
+// Extend additional album theme.
+// Large headerline, smaller text for paintings
+
+%album-other
+
+  .album-images-container
+    +container(80%)
+
+  .album-heading
+    font-size: 4em
+    text-align: left
+    padding: 1em 0
+    text-align: center
+
+    span
+      display: block
+      font-size: 1em
+
+  .album-image-container
+    width: 30%
+    margin-left: 0
+    margin-right: 2%
+    float: left
+
+    &:last-child
+      margin-right: 0
+
+    .photo-heading
+      font-size: 1em
+      line-height: 1em
+      text-align: left
+
+    img
+      max-width: 100%
+
+// -----------------------------------------------------------------------------
+// Placeholdeers
+// -----------------------------------------------------------------------------
+.album
+  &.totems,
+  &.rounds
+    @extend %album-other
+
+// -----------------------------------------------------------------------------
+//  Albums (first for now)
+// -----------------------------------------------------------------------------
+
+.album-heading,
+.photo-heading
+  @extend %primary-font
+  font-size: 2em
+  line-height: 1.4em
+  padding: 1em 0 1em
+  text-transform: uppercase
+
+.album-image
+  display: block
+  margin: 0 auto
+
+.album
+  display: table
+  width: 100%
+  color: #333
+  position: relative
+  text-align: center
+  padding-bottom: 5%
+  padding-top: 5%
+
+  .album-container
+    display: table-cell
+    vertical-align: middle
+    text-align: center
+
+    +breakpoint(max-width 630px)
+      padding: 5% 0
+
+  a
+    color: inherit
+
+.album-button
+  +clearfix
+  padding: 10px
+  border: 1px solid #333
+  color: #333
+  border-radius: 4px
+  display: block
+  margin: 0 auto
+  font-size: 44px
+
+.album-image-description
+  +container(480px)
+  margin: 0 auto
+  padding: 2em 0
+  line-height: 1.35em
+  text-align: left
+  padding-bottom: 2em
+
+// -----------------------------------------------------------------------------
+//  Album - Totems
+// -----------------------------------------------------------------------------
+
+.album.totems
+  background-color: #040404
+  background-image: url(image_path("totems-background.svg"))
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  color: #fff
+
+// -----------------------------------------------------------------------------
+//  Album - Rounds
+// -----------------------------------------------------------------------------
+
+.album.rounds
+  overflow: hidden
+  position: relative
+  min-height: 2000px !important
+  color: #fff
+
+  .container
+    vertical-align: top
+    display: table-cell
+
+  .album-heading
+    text-align: center
+    letter-spacing: .06em
+    line-height: 1em
+
+  .photo-heading
+    text-align: center
+    letter-spacing: .06em
+
+  // $round-size: 2000px
+  .rounds-big
+    border-radius: 50%
+    position: absolute
+    // width: $round-size
+    // height: ($round-size - 500px)
+    // margin-left: (-$round-size/2)
+    width: 150%
+    height: 100vw
+    left: 50%
+    top: 0
+    margin-left: -75%
+    border: 10px solid teal
+    background: #222
+    z-index: -1
+
+  .album-image-container:nth-child(n+5):nth-child(-n+7)
+    margin-top: 2em

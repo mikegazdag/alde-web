@@ -1,0 +1,10 @@
+---
+title: Gallery
+innerPage: true
+---
+
+section
+  .container
+    - data.paintings.each do |p|
+      p #{ p.title }
+      p #{ p.title.parameterize }
