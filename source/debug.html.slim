@@ -1,0 +1,27 @@
+---
+title: Gallery
+innerPage: true
+---
+
+section
+  .container
+
+    table width="80%"
+      tr
+        td Title
+        td URL
+        td Filename
+        td Year
+        td Color
+
+      - data.paintings.each do |p|
+        tr
+          td #{ p.title }
+          td #{ p.title.parameterize }
+          td #{ p.title.parameterize }
+          td #{ p.year }
+          td #{ p.color }
+
+hr
+br
+br
