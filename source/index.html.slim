@@ -14,29 +14,17 @@ section.masthead
     .masthead-prop
 
 section.album
-  - p = paintings.detect{ |p| p[:title] == "Winter Migration"}
-
-  .album-container
-    h2.album-heading #{ p.title }
-
-    = image_tag_retina("/images/pieces/#{ p.title.parameterize }.png", "album-image")
-
-    p.album-image-description
-      | Many things in our lives changed in our lives over the years,
-      | but time seems to have stood still, as if immortalized, with the ocean roar
-      | and the pound surf rolling in as the sun turns molten in the distant sky.
-
-    = link_to "Learn More", "http://wheverever.com", class: "album-button"
+  - painting = paintings.detect{ |p| p[:title] == "Winter Migration" }
+  = partial("album_extra", locals: { painting: painting })
 
 section.album.totems
 
   .album-container
     p.album-heading Totems
-
     - totems = paintings.find_all{ |p| p[:collection] == "Totems" }
     - totems_description = data.collections.find_all{ |c| c[:collection] == "Rounds" }
-
     - totems.each do |t|
+
       .album-images-container
           .album-images-container
 
@@ -50,17 +38,8 @@ section.album.totems
     p.album-image-description #{ totems_description.first.description }
 
 section.album.extra
-  .album-container
-    - plum_crazy = paintings.find_all{ |p| p[:title] == "Plum Crazy" }
-    - plum_crazy.each do |p|
-
-      h2.album-heading #{p.title}
-
-      = image_tag_retina("/images/pieces/#{ p.title.parameterize }.png", "album-image")
-
-      p.album-image-description #{p.description}
-
-      = link_to "Purchase", "/#{ p.title.parameterize }/buy/", class: "album-button album-button-buy"
+  - painting = paintings.detect{ |p| p[:title] == "Plum Crazy" }
+  = partial("album_extra", locals: { painting: painting })
 
 section.album.rounds
   .rounds-big
@@ -80,18 +59,18 @@ section.album.rounds
             h2.photo-heading #{r.title}
 
 section.album.extra
-  .album-container
-    - plum_crazy = paintings.find_all{ |p| p[:title] == "Silent Shadows" }
-    - plum_crazy.each do |p|
+  - painting = paintings.detect{ |p| p[:title] == "Silent Shadows" }
+  = partial("album_extra", locals: { painting: painting })
 
-      h2.album-heading #{p.title}
 
-      = image_tag_retina("/images/pieces/#{ p.title.parameterize }.png", "album-image")
+section.album.extra
+  - painting = paintings.detect{ |p| p[:title] == "Raven's Roost" }
+  = partial("album_extra", locals: { painting: painting })
 
-      p.album-image-description #{p.description}
 
-      = link_to "Purchase", "/#{ p.title.parameterize }/buy/", class: "album-button album-button-buy"
-
+section.album.extra
+  - painting = paintings.detect{ |p| p[:title] == "Summers Eve" }
+  = partial("album_extra", locals: { painting: painting })
 
 /-------------------------------------------------------------------------------
 / Featured Post
