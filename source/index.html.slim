@@ -79,6 +79,20 @@ section.album.rounds
           figcaption
             h2.photo-heading #{r.title}
 
+section.album.extra
+  .album-container
+    - plum_crazy = paintings.find_all{ |p| p[:title] == "Silent Shadows" }
+    - plum_crazy.each do |p|
+
+      h2.album-heading #{p.title}
+
+      = image_tag_retina("/images/pieces/#{ p.title.parameterize }.png", "album-image")
+
+      p.album-image-description #{p.description}
+
+      = link_to "Purchase", "/#{ p.title.parameterize }/buy/", class: "album-button album-button-buy"
+
+
 /-------------------------------------------------------------------------------
 / Featured Post
 /-------------------------------------------------------------------------------

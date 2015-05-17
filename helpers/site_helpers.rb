@@ -6,7 +6,7 @@ module SiteHelpers
   end
 
   def image_tag_retina(path, classname)
-    image_tag(path.to_s, class: classname.to_s, data: { retina: "url('#{ path }@2x.png'" })
+    image_tag(path.to_s, class: classname.to_s, data: { retina: "url('#{ path }@2x'" })
   end
 
 end
