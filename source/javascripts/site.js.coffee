@@ -7,36 +7,42 @@ $ ->
     $('[data-retina-bg]').each ->
       this.style.backgroundImage = this.getAttribute('data-retina-bg')
 
-  # Contact form submission
-  $(".contact-form").submit (e) ->
+
+  $('.button').on 'click', (e) ->
     e.preventDefault()
-    e.stopPropagation()
-    $form = $(this)
+    console.log $(this).text()
+    $('section.purchase').toggleClass('is-open')
+    # return
+  # Contact form submission
+  # $(".contact-form").submit (e) ->
+  #   e.preventDefault()
+  #   e.stopPropagation()
+  #   $form = $(this)
 
-    nameValue = $form.find(".contact-input-name").val().trim()
-    emailValue = $form.find(".contact-input-email").val().trim()
-    messageValue = $form.find(".contact-message").val().trim()
+  #   nameValue = $form.find(".contact-input-name").val().trim()
+  #   emailValue = $form.find(".contact-input-email").val().trim()
+  #   messageValue = $form.find(".contact-message").val().trim()
 
-    $.ajax
-      dataType: "jsonp"
-      url: "http://getsimpleform.com/messages/ajax?form_api_token=NEWTOKEN"
-      data:
-        name: nameValue
-        email: emailValue
-        message: messageValue
-      success: (data, text) ->
-        console.log "success"
-        $form.addClass("zoomOut").delay(200).queue (next) ->
-          $(this).addClass "is-hidden"
-          next()
-        $(".contact-response.success").removeClass("is-hidden")
-      error: (request, status, error) ->
-        alert request.responseText
-        $form.addClass("zoomOut").delay(200).queue (next) ->
-          $(this).addClass "is-hidden"
-          next()
-        $(".contact-response.error").removeClass("is-hidden")
-        return
+  #   $.ajax
+  #     dataType: "jsonp"
+  #     url: "http://getsimpleform.com/messages/ajax?form_api_token=NEWTOKEN"
+  #     data:
+  #       name: nameValue
+  #       email: emailValue
+  #       message: messageValue
+  #     success: (data, text) ->
+  #       console.log "success"
+  #       $form.addClass("zoomOut").delay(200).queue (next) ->
+  #         $(this).addClass "is-hidden"
+  #         next()
+  #       $(".contact-response.success").removeClass("is-hidden")
+  #     error: (request, status, error) ->
+  #       alert request.responseText
+  #       $form.addClass("zoomOut").delay(200).queue (next) ->
+  #         $(this).addClass "is-hidden"
+  #         next()
+  #       $(".contact-response.error").removeClass("is-hidden")
+  #       return
 
 #------------------------------------------------------------------------------
 # Add over classes to parent elements from <a>

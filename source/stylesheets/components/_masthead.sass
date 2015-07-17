@@ -5,8 +5,8 @@
   position: relative
 
 .masthead-heading
-  @extend %secondary-font
   +position(absolute, null null 5% 5%)
+  @extend %secondary_font
   line-height: 1em
   padding: 0 0 30px
   text-align: left
@@ -14,8 +14,8 @@
 
   span
     display: block
-    letter-spacing: .1em
     font-size: 66px
+    letter-spacing: .1em
     line-height: 1.2em
 
     &:first-child

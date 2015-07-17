@@ -27,9 +27,9 @@ activate :autoprefixer do |config|
   config.cascade  = true
 end
 
-# data.paintings.each do |p|
-#   proxy "/painting/#{p.name.parameterize}.html", "/painting/painting.html", :locals => {:name => p }, :ignore => true, layout: "layout"
-# end
+data.paintings.each do |p|
+  proxy "/painting/#{p.title.parameterize}.html", "/painting/painting.html", :locals => {:name => p }, :ignore => true, layout: "layout"
+end
 
 #-----------------------------------------------------------------------------
 # Deployment

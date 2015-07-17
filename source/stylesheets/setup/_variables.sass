@@ -18,17 +18,17 @@ $headingsFontFamily: FatboySlimBoy, "Helvetica Neue", Helvetica, Arial, sans-ser
 //------------------------------------------------------------------------------
 // Font Weights
 //------------------------------------------------------------------------------
-$light: 300
-$normal: 400
-$bold: 600
-$heavy: 700
+$font-weight_light: 300
+$font-weight_normal: 400
+$font-weight_bold: 600
+$font-weight_heavy: 700
 
 //------------------------------------------------------------------------------
 // Colors
 //------------------------------------------------------------------------------
-$primary-color: #3c4a5e
-$secondary-color: #ebedf0
-$tertiary-color: #78889f
+$primary_color: #3c4a5e
+$secondary_color: #ebedf0
+$tertiary_color: #78889f
 
 $border-color: #C8CCD4
 
@@ -38,14 +38,25 @@ $light-gray: #f0f7f9
 $black: #363636
 $blue: #8095ff
 
-//------------------------------------------------------------------------------
-// Responsive Queries
-//------------------------------------------------------------------------------
-$phone-p: 320px
-$phone-l: 480px
-$tab-p: 640px
-$tab-l: 770px
-$desk: 960px
-
 $fading: cubic-bezier(0.3, 0.4, 0.4, 0.1)
 $bounce: cubic-bezier(.225, .5, .165, 1)
+
+//------------------------------------------------------------------------------
+// Placeholders
+//------------------------------------------------------------------------------
+%primary_font
+  font-family: "Averia Serif Libre", "Times New Roman", serif
+  // font-weight: 300
+  line-height: 1em
+
+%secondary_font
+  font-family: fatboy_slim_bltc_2_brkregular, sans-serif
+  font-weight: 400
+  line-height: 1em
+
+%post-heading
+  color: $primary_color
+  font-weight: $font-weight_heavy
+  line-height: 1.2em
+  font-size: 4.125em
+  text-align: center

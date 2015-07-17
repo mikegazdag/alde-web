@@ -1,0 +1,35 @@
+.painting
+  .painting-details
+    +container(93%)
+
+  h1
+    font-size: 4em
+    text-align: left
+    text-align: center
+
+  img
+    display: block
+    margin: 1em auto
+
+  .description
+    display: block
+    margin: 2em auto
+    max-width: 780px
+    font-size: 19px
+
+  .buttons
+    margin: 2em auto 0
+    display: block
+    text-align: center
+
+  .button
+    @extend %button
+    color: #333
+
+.purchase
+  background: rgba(pink, .25)
+  height: 3000px
+  display: none
+
+  &.is-open
+    display: block

@@ -1,0 +1,22 @@
+---
+title: #{p.title}
+page_classes: painting
+---
+- p = locals[:name]
+
+= partial('layouts/nav')
+
+section.painting-details
+  .container
+    h1 #{p.title}
+
+    = image_tag_retina("/images/pieces/#{ p.title.parameterize }.png", "album-image")
+
+    p.description #{p.description}
+
+    .buttons
+      a.button href="#" Buy Something
+
+section.purchase
+  .container
+    p here's a bunch of different stuff with and the like.
