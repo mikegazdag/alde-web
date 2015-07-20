@@ -8,9 +8,10 @@ page_classes: painting
 
 section.painting-details
   .container
+    span #{p.pid}
     h1 #{p.title}
 
-    = image_tag_retina("/images/pieces/#{ p.title.parameterize }.png", "album-image")
+    = image_tag_retina("/images/paintings/#{ p.title.parameterize }.png", "album-image")
 
     p.description #{p.description}
 
@@ -20,3 +21,42 @@ section.painting-details
 section.purchase
   .container
     p here's a bunch of different stuff with and the like.
+
+    table.data-table
+      tr
+        td Post Card
+        td
+          p
+            span.price $#{p.products.card.price}
+            span.size #{p.products.card.dimensions}
+            span.link #{p.products.card.link}
+      tr
+        td Block
+        td
+          p
+            span.price $#{p.products.block.price}
+            span.size #{p.products.block.dimensions}
+            span.link #{p.products.block.link}
+
+      tr
+        td poster
+        td
+          p
+            span.price $#{p.products.poster.price}
+            span.size #{p.products.poster.dimensions}
+            span.link #{p.products.poster.link}
+
+      tr
+        td Paper
+        td
+          p
+            span.price $#{p.products.paper.price}
+            span.size #{p.products.paper.dimensions}
+            span.link #{p.products.paper.link}
+      tr
+        td giclee
+        td
+          p
+            span.price $#{p.products.giclee.price}
+            span.size #{p.products.giclee.dimensions}
+            span.link #{p.products.giclee.link}

@@ -29,11 +29,11 @@ section.album.totems
       - totems.each do |t|
 
         figure.album-image-container
-          = image_tag_retina("/images/pieces/#{ t.title.parameterize }.png", "album-image")
+          = image_tag_retina("/images/paintings/#{ t.title.parameterize }.png", "album-image")
           figcaption
             h2.photo-heading #{ t.title }
 
-            = link_to "Purchase", "/#{ t.title.parameterize }/buy/", class: "album-button album-button-buy"
+            = link_to "Purchase", "/painting/#{ t.title.parameterize }/", class: "album-button album-button-buy"
 
 section.album.extra
   - painting = paintings.detect{ |p| p[:title] == "Plum Crazy" }
@@ -52,7 +52,7 @@ section.album.rounds
       - rounds.each do |r|
 
         figure.album-image-container
-          = image_tag_retina("/images/pieces/#{ r.title.parameterize }.png", class: "album-image")
+          = image_tag_retina("/images/paintings/#{ r.title.parameterize }.png", class: "album-image")
           figcaption
             h2.photo-heading #{r.title}
 

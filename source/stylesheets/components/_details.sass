@@ -1,4 +1,5 @@
 .painting
+
   .painting-details
     +container(93%)
 
@@ -29,7 +30,19 @@
 .purchase
   background: rgba(pink, .25)
   height: 3000px
-  display: none
+  // display: none
 
   &.is-open
     display: block
+
+  table
+    border-collapse: collapse
+
+  .price,
+  .size,
+  .link
+    margin-left: 5px
+    margin-right: 5px
+
+  .size
+    font-weight: bold

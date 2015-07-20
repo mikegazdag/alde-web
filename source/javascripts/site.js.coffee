@@ -12,7 +12,7 @@ $ ->
     e.preventDefault()
     console.log $(this).text()
     $('section.purchase').toggleClass('is-open')
-    # return
+
   # Contact form submission
   # $(".contact-form").submit (e) ->
   #   e.preventDefault()
