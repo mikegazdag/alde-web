@@ -4,121 +4,454 @@
   year: 2009
   color: purple
   collection: Rounds
-  size: 24" x 24"
+  dimensions: 24" x 24"
   description: 'I remember many years ago, driving to and on Long Beach. Many things in our lives have changed over the years but time seems to have stood still here as if immortalized with the ocean roar and the pounding surf rolling in as the sun turns molten in the distant sky.'
-
+  products:
+    card:
+      price: 7
+      dimensions: 'blooom'
+      link: 'about:blank'
+    block:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    poster:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    paper:
+      price: 25
+      dimensions: 18" x 16"
+      link: 'about:blank'
+    giclee:
+      price: 350
+      dimensions: 24" x 24"
+      link: 'about:blank'
 -
   pid: 0901
   title: Chin Beach West
   year: 2009
   color: magenta
-  size: '24" x 36"'
+  dimensions: '24" x 36"'
   description: 'I remember breaking out of the forest and into the open, vast ocean surf pounding the shore below us. We followed the trail down, looking east was Chin Beach. It was here at Chin Beach that we laid down our heavy loads and camped on the beach burning the late night embers and listening to the ocean roll beyond the light of our flickering flame.'
-
+  products:
+    card:
+      price: 7
+      dimensions: 'blooom'
+      link: 'about:blank'
+    block:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    poster:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    paper:
+      price: 25
+      dimensions: 18" x 16"
+      link: 'about:blank'
+    giclee:
+      price: 350
+      dimensions: 24" x 24"
+      link: 'about:blank'
 -
   pid: 0801
   title: Crest Mt. Sunset
   year: 2008
   color: orange
-  size: '2 @ 10" x 12" & 1 @ 16" x 20"'
+  dimensions: '2 @ 10" x 12" & 1 @ 16" x 20"'
   canvas_description: "Made up on 3 panels, two 10x12, and one 16x20"
   description: 'Inspired by a night spent up on Crest Mt. camped out by a pristine sub-alpine lake with no name. It was here that we sat on our rocky shelf overlooking the mountains of Strathcona Park watching the brilliance of the setting sun dazzle our eyes. It melted away into the evening sky, west beyond Gold River.'
+  products:
+    card:
+      price: 7
+      dimensions: 'blooom'
+      link: 'about:blank'
+    block:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    poster:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    paper:
+      price: 25
+      dimensions: 18" x 16"
+      link: 'about:blank'
+    giclee:
+      price: 350
+      dimensions: 24" x 24"
+      link: 'about:blank'
 -
   pid: 0904
   title: The Hills of Sooke
   year: 2009
   color: green
   collection: Rounds
-  size: '24" x 24"'
+  dimensions: '24" x 24"'
   description: 'When I first lived in Victoria my greatest passion the forest was almost lost, consumed by the pulsing energy of the city. It was when I started exploring Mt. McDonanld area that my passion for the wilderness grew stronger. It was here that I felt the challenge of the wilderness beating in my heart once again.'
+  products:
+    card:
+      price: 7
+      dimensions: 'blooom'
+      link: 'about:blank'
+    block:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    poster:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    paper:
+      price: 25
+      dimensions: 18" x 16"
+      link: 'about:blank'
+    giclee:
+      price: 350
+      dimensions: 24" x 24"
+      link: 'about:blank'
 -
   pid: 0906
   title: Orca Symmetry
   year: 2009
   color: blue
   collection: Rounds
-  size: '24" x 24"'
+  dimensions: '24" x 24"'
   description: 'They always seemed like they were on a mission, moving quickly and fluidly through the water almost cutting it when coming up for air and then back down again all the while keeping a steady pace. I have heard so many great stories of their abilities and am inspired to respect these intelligent wonders of nature.'
+  products:
+    card:
+      price: '7'
+      dimensions: '34 x 34'
+      link: 'about:card'
+    block:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    poster:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    paper:
+      price: 25
+      dimensions: 18" x 16"
+      link: 'about:blank'
+    giclee:
+      price: 350
+      dimensions: 24" x 24"
+      link: 'about:blank'
 -
   pid: 0902
   title: Payzant Creek
   year: 2009
   color: magenta
   collection: Rounds
-  size: '24" x 24"'
+  dimensions: '24" x 24"'
   description: 'Nestled in the forest you could hear the faint sound of pounding surf off in the distance on the ocean shores below. You hear the wind blowing through the fir needles of the trees as they swayed in the breeze. The Juan de Fuca trial has left many impressions on my mind, Payzant Creek is one of them.'
+  products:
+    card:
+      price: 7
+      dimensions: 'blooom'
+      link: 'about:blank'
+    block:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    poster:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    paper:
+      price: 25
+      dimensions: 18" x 16"
+      link: 'about:blank'
+    giclee:
+      price: 350
+      dimensions: 24" x 24"
+      link: 'about:blank'
 -
   pid: 1002
   title: Plum Crazy
   year: 2009
   color: purple
-  size: '30" x 40"'
-  description: "It reminds me of Hairtrigger Lake in the Mt. Washington area, in Paradise Meadows just before you get to Circlet Lake. Often I have seen the reflections in the water with a light ripple at dusk. From the stillness of my mind serenity spoke."
+  dimensions: '30" x 40"'
+  description: "This reminds me of Hairtrigger Lake in the Mt. Washington area, in Paradise Meadows just before you get to Circlet Lake. Often I have seen the reflections in the water with a light ripple at dusk. From the stillness of my mind serenity spoke."
+  products:
+    card:
+      price: 7
+      dimensions: 'blooom'
+      link: 'about:blank'
+    block:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    poster:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    paper:
+      price: 25
+      dimensions: 18" x 16"
+      link: 'about:blank'
+    giclee:
+      price: 350
+      dimensions: 24" x 24"
+      link: 'about:blank'
 -
   pid: 0804
   title: "Raven's Roost"
   year: 2008
   color: purple
-  size: '24" x 60"'
+  dimensions: '24" x 60"'
   description: 'I have always been fascinated with the raven. I have often looked up through dusky sky only to see a raven gliding by silently. I wanted to break ground with this painting in that I had not yet painted something in such large proportions and was eager to expand my horizons dimensionally.'
+  products:
+    card:
+      price: 7
+      dimensions: 'blooom'
+      link: 'about:blank'
+    block:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    poster:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    paper:
+      price: 25
+      dimensions: 18" x 16"
+      link: 'about:blank'
+    giclee:
+      price: 350
+      dimensions: 24" x 24"
+      link: 'about:blank'
 -
   pid: 0803
   title: Silent Shadows
   year: 2008
   color: green
-  size: '24" x 36"'
+  dimensions: '24" x 36"'
   description: 'I so often remember coming down the steep trail into a darkened forest as the sun was fading off into the distant horizon. The smell and the thickness of the trees growth surrounding me and the lonely silence of the forest settling into the night.'
+  products:
+    card:
+      price: 7
+      dimensions: 'blooom'
+      link: 'about:blank'
+    block:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    poster:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    paper:
+      price: 25
+      dimensions: 18" x 16"
+      link: 'about:blank'
+    giclee:
+      price: 350
+      dimensions: 24" x 24"
+      link: 'about:blank'
 -
   pid: 1001
   title: Starry Night
   year: 2010
   color: purple
-  size: '24" x 24"'
+  dimensions: '24" x 24"'
   description: 'Many times looking up through the trees into the endless night sky to see the stars and the moon shinning down on me.'
+  products:
+    card:
+      price: 7
+      dimensions: 'blooom'
+      link: 'about:blank'
+    block:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    poster:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    paper:
+      price: 25
+      dimensions: 18" x 16"
+      link: 'about:blank'
+    giclee:
+      price: 350
+      dimensions: 24" x 24"
+      link: 'about:blank'
 -
   pid: 0802
   title: Summers Eve
   year: 2008
   color: orange
-  size: '24" x 36"'
+  dimensions: '24" x 36"'
   description: 'Distance the honking of the Geese flying low in the dusky summer skies. The evening beading down on them as they keep a brisk pace. I remember hearing the sound of their beating wings above, effortless and silent as they pass overhead. Their honking echoing again off in the distance of the evening skies.'
-
+  products:
+    card:
+      price: 7
+      dimensions: 'blooom'
+      link: 'about:blank'
+    block:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    poster:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    paper:
+      price: 25
+      dimensions: 18" x 16"
+      link: 'about:blank'
+    giclee:
+      price: 350
+      dimensions: 24" x 24"
+      link: 'about:blank'
 -
   pid: 0905
   title: The Watcher
   year: 2009
   color: magenta
-  size: 24" x 24"'
+  dimensions: 24" x 24"'
   collection: Rounds
   description: 'One day atop a summit, I notice that we were not alone. There was a lone raven observing us from atop of a dead tree, watching us intently. The air seemed electrified and energized, as the clouds grew dark and ominous. It was here that the ravens collected and it was here that they made off into the distant horizon.'
+  products:
+    card:
+      price: 7
+      dimensions: 'blooom'
+      link: 'about:blank'
+    block:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    poster:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    paper:
+      price: 25
+      dimensions: 18" x 16"
+      link: 'about:blank'
+    giclee:
+      price: 350
+      dimensions: 24" x 24"
+      link: 'about:blank'
 -
   pid: 1501
   title: Winter Migration
   year: 2015
   color:
-  size:
+  dimensions:
   description:
+  products:
+    card:
+      price: 7
+      dimensions: 'blooom'
+      link: 'about:blank'
+    block:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    poster:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    paper:
+      price: 25
+      dimensions: 18" x 16"
+      link: 'about:blank'
+    giclee:
+      price: 350
+      dimensions: 24" x 24"
+      link: 'about:blank'
 -
   pid: 1502
   title: Mystic Dream
   year: 2014
   color:
-  size:
+  dimensions:
   collection: Totems
   description:
+  products:
+    card:
+      price: 7
+      dimensions: 'blooom'
+      link: 'about:blank'
+    block:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    poster:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    paper:
+      price: 25
+      dimensions: 18" x 16"
+      link: 'about:blank'
+    giclee:
+      price: 350
+      dimensions: 24" x 24"
+      link: 'about:blank'
 -
   pid: 1503
   title: Reflections of the Past
   year: 2014
   color:
-  size:
+  dimensions:
   collection: Totems
   description:
+  products:
+    card:
+      price: 7
+      dimensions: 'blooom'
+      link: 'about:blank'
+    block:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    poster:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    paper:
+      price: 25
+      dimensions: 18" x 16"
+      link: 'about:blank'
+    giclee:
+      price: 350
+      dimensions: 24" x 24"
+      link: 'about:blank'
 -
   pid: 1503
   title: Distant Echoes
   year: 2014
   color:
-  size:
+  dimensions:
   collection: Totems
   description:
+  products:
+    card:
+      price: 7
+      dimensions: 'blooom'
+      link: 'about:blank'
+    block:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    poster:
+      price: 7
+      dimensions: 5" x 5"
+      link: 'about:blank'
+    paper:
+      price: 25
+      dimensions: 18" x 16"
+      link: 'about:blank'
+    giclee:
+      price: 350
+      dimensions: 24" x 24"
+      link: 'about:blank'

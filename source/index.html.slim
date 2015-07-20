@@ -21,21 +21,19 @@ section.album.totems
 
   .album-container
     p.album-heading Totems
-    - totems = paintings.find_all{ |p| p[:collection] == "Totems" }
-    - totems_description = data.collections.find_all{ |c| c[:collection] == "Rounds" }
-    - totems.each do |t|
 
-      .album-images-container
-          .album-images-container
+    .album-images-container
 
-            figure.album-image-container
-              = image_tag_retina("/images/pieces/#{ t.title.parameterize }.png", "album-image")
-              figcaption
-                h2.photo-heading #{ t.title }
+      - totems = paintings.find_all{ |p| p[:collection] == "Totems" }
+      - totems_description = data.collections.find_all{ |c| c[:collection] == "Rounds" }
+      - totems.each do |t|
 
-                = link_to "Purchase", "/#{ t.title.parameterize }/buy/", class: "album-button album-button-buy"
+        figure.album-image-container
+          = image_tag_retina("/images/paintings/#{ t.title.parameterize }.png", "album-image")
+          figcaption
+            h2.photo-heading #{ t.title }
 
-    p.album-image-description #{ totems_description.first.description }
+            = link_to "Purchase", "/painting/#{ t.title.parameterize }/", class: "album-button album-button-buy"
 
 section.album.extra
   - painting = paintings.detect{ |p| p[:title] == "Plum Crazy" }
@@ -54,7 +52,7 @@ section.album.rounds
       - rounds.each do |r|
 
         figure.album-image-container
-          = image_tag_retina("/images/pieces/#{ r.title.parameterize }.png", class: "album-image")
+          = image_tag_retina("/images/paintings/#{ r.title.parameterize }.png", class: "album-image")
           figcaption
             h2.photo-heading #{r.title}
 

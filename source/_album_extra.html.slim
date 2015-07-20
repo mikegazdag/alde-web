@@ -2,8 +2,8 @@
 
   h2.album-heading #{ painting.title}
 
-  = image_tag_retina("/images/pieces/#{ painting.title.parameterize }.png", "album-image")
+  = image_tag_retina("/images/paintings/#{ painting.title.parameterize }.png", "album-image")
 
   p.album-image-description #{ painting.description}
 
-  = link_to "Purchase", "/#{ painting.title.parameterize }/buy/", class: "album-button album-button-buy"
+  = link_to "Purchase", "/painting/#{ painting.title.parameterize }/#buy", class: "album-button album-button-buy"
